@@ -39,7 +39,7 @@ const CreateBlog = () => {
     async function handleClick(event) {
         event.preventDefault();
 
-        const res = await fetch("/createblog", {
+        const res = await fetch("https://food-blog-mern.herokuapp.com/createblog", {
             method: "POST",
             headers: {
                 "content-type": "application/json"

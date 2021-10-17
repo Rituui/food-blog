@@ -10,7 +10,7 @@ const Blog = () => {
 
     const callToBlogs = async () => {
         try {
-            const res = await fetch("/blogs", {
+            const res = await fetch("https://food-blog-mern.herokuapp.com/blogs", {
                 method: "GET",
                 headers: {
                     Accept: "application/json",
@@ -48,7 +48,7 @@ const Blog = () => {
                                 <div className="blogs-caption">
                                     <h3>{blog.title.substring(0, 20)}</h3>
                                     <p>{blog.description.substring(0, 30)}</p>
-                                    <i class="fas fa-arrow-circle-right" onClick={() => { history.push(`/blogs/${blog._id}`) }}></i>
+                                    <i class="fas fa-arrow-circle-right" onClick={() => { history.push(`https://food-blog-mern.herokuapp.com/blogs/${blog._id}`) }}></i>
                                 </div>
                             </div>
                         )
